@@ -47,9 +47,9 @@ function prevSection() {
 }
 
 Skype.ui({
-    "name": "chat",
-    "element": "SkypeButton_Call_ridwanul.hafiz_1",
-    "participants": ["ridwanul.hafiz"]
+    "name": "call",
+    "element": "SkypeButton_Call_shudhui.ami_1",
+    "participants": ["shudhui.ami"]
 });
 
 function visit(url) {
