@@ -5,277 +5,69 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/style.css" type="text/css">
-    <title>RealEstate</title>
+    <title>Ahmed zobayer</title>
 </head>
-<body>
-<div class="flat-full-page">
-    <div class="section_header">
-        <div class="cover_slide" id="cover_slide">
-            <div class="slide_box">
-                <div class="each_slide _active" style="background-image: url('resources/media/images/cover_bg_3.jpg')">
-                    <div class="header_content">
-                        <div class="container-flat-sm">
-                            <div class="cover_text">
-                                <div class="slogan">WE INSPIRED OF CREATING MODERN HABITATE &</div>
-                                <div class="title">LEADING THE CENTURY NEEDS OF ACCOMMODATION</div>
-                                <a class="btn_draw draw action_trigger">explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="each_slide" style="background-image: url('resources/media/images/cover_bg_2.jpg')">
-                    <div class="header_content">
-                        <div class="container-flat-sm">
-                            <div class="cover_text">
-                                <div class="slogan">sociis natoque penatibus et magnis &</div>
-                                <div class="title">dis parturient montes, nascetur ridiculus mus. Donec</div>
-                                <a class="btn_draw draw action_trigger">explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="each_slide" style="background-image: url('resources/media/images/cover_bg_1.jpg')">
-                    <div class="header_content">
-                        <div class="container-flat-sm">
-                            <div class="cover_text">
-                                <div class="slogan">Aliquam lorem ante, dapibus in, viverra quis &</div>
-                                <div class="title">feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet
-                                </div>
-                                <a class="btn_draw draw action_trigger">explore</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<body style="background-image: url('resources/media/cover.jpg')">
+<div class="body_wrapper">
+    <div class="nav_left">
+        <div class="nav_inner_section">
+            <a class="arrow_up" onclick="prevSection()" style="background-image: url('resources/media/top.png')"></a>
+            <div id="nav_triggers">
+                <a class="section-nav_trigger" onclick="selectSection(1)"></a>
+                <a class="section-nav_trigger" onclick="selectSection(2)"></a>
+                <a class="section-nav_trigger" onclick="selectSection(3)"></a>
+                <a class="section-nav_trigger" onclick="selectSection(4)"></a>
             </div>
-            <div class="slide_navigation">
-                <ul>
-                    <li class="_active"><a onclick="active_cover_slide(this, 0)">ONGOING</a></li>
-                    <li><a onclick="active_cover_slide(this, 1)">COMPLETED</a></li>
-                    <li><a onclick="active_cover_slide(this, 2)">UPCOMING</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="top_bar">
-            <div class="site_logo" style="background-image: url('resources/media/images/company_logo.png')"></div>
-            <div class="container-flat-sm">
-                <div class="info_section">
-                    <div class="text-content"><span>HOTLINE: </span><span class="number">+8801762011847</span></div>
-                    <div class="info_trigger" onclick="view_phone(event, this)"
-                         style="background-image: url('resources/media/icons/phone.png')"></div>
-                </div>
-            </div>
-        </div>
-        <div class="top_nav">
-            <div class="container-flat">
-                <div class="nav_tab">
-                    <div class="nav_trigger" onclick="toggle_menu(event, this)">
-                        <div class="inner_section menu_trigger">
-                            <div class="trigger_btn">
-                                <span class="line-sm"></span>
-                                <span class="line-bg"></span>
-                                <span class="line-sm"></span>
-                                <span class="line-sm"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nav_menu" id="nav_menu">
-                        <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">ABOUT US</a></li>
-                            <li><a href="#" onclick="open_sub(event, this)"><span class="icon"
-                                                                                  style="background-image: url('resources/media/icons/dot.png')"></span>PROJECT</a>
-                                <ul class="submenu animated">
-                                    <li><a class="submenu_trigger" href="#">Green Marsh</a></li>
-                                    <li><a class="submenu_trigger" href="#">Twisted Rush</a></li>
-                                    <li><a class="submenu_trigger" href="#">Eloveena tower</a></li>
-                                    <li><a class="submenu_trigger" href="#">Luner bliss</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">LANDOWNER</a></li>
-                            <li><a href="#">BUYER</a></li>
-                            <li><a href="#">NEWS</a></li>
-                            <li><a href="#">CAREER</a></li>
-                            <li><a href="#">CONTACT US</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <a class="arrow_down" onclick="nextSection()" style="background-image: url('resources/media/down.png')"></a>
         </div>
     </div>
-    <div class="section_main_container">
-        <div class="section_main">
-            <div class="section_text_wrapper">
-                <div class="description_wrapper">
-                    <div class="title">PROJECTS</div>
-                    <div class="desc">Developing a residential project is one of the most challening, yet highly
-                        rewarding,
-                        ventures one can undertake.<br>
-                        <br>
-                        No matter what the size or cost of a project, it has the power to shape lives and landscapes.
-                    </div>
-                    <div class="margin-30"></div>
-                    <button class="draw action_trigger">VIEW ALL</button>
-                </div>
-                <div class="project_slide_wrapper" id="project_slide_wrapper">
-                    <div class="project_slide">
-                        <div class="project_slide_inner _active">
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_1.jpg')">
-                                <span class="slide_title">GREEN MARSH</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_2.jpg')">
-                                <span class="slide_title">TWISTED RUSH</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_3.jpg')">
-                                <span class="slide_title">ELOVEENA TOWER</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_4.jpg')">
-                                <span class="slide_title">LUNER BLISS</span>
-                            </div>
-                        </div>
-                        <div class="project_slide_inner">
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_4.jpg')">
-                                <span class="slide_title">GREEN MARSH</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_2.jpg')">
-                                <span class="slide_title">TWISTED RUSH</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_3.jpg')">
-                                <span class="slide_title">ELOVEENA TOWER</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_3.jpg')">
-                                <span class="slide_title">LUNER BLISS</span>
-                            </div>
-                        </div>
-                        <div class="project_slide_inner">
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_2.jpg')">
-                                <span class="slide_title">GREEN MARSH</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_1.jpg')">
-                                <span class="slide_title">TWISTED RUSH</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_3.jpg')">
-                                <span class="slide_title">ELOVEENA TOWER</span>
-                            </div>
-                            <div class="eachSlide animated"
-                                 style="background-image: url('resources/media/images/project_4.jpg')">
-                                <span class="slide_title">LUNER BLISS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel_nav">
-                        <a class="nav_trigger" onclick="project_nav(1)"
-                           style="background-image: url('resources/media/icons/next.png')"></a>
-                        <a class="nav_trigger" onclick="project_nav(0)"
-                           style="background-image: url('resources/media/icons/prav.png')"></a>
-                        <div class="nav_triggers">
-                            <span onclick="project_nav_trigger(this, 0)" class="slide_int _active">ONGOING</span>
-                            <span onclick="project_nav_trigger(this, 1)" class="slide_int">COMPLETED</span>
-                            <span onclick="project_nav_trigger(this, 2)" class="slide_int">UPCOMING</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="nav_right">
+        <div class="nav_inner_section">
+            <a href="javascript://" onclick="SkypeWebControl.SDK.Chat.startChat({ConversationType: 'person', ConversationId: 'ridwanul.hafiz'});"
+               class="each_nav_trigger" style="background-image: url('resources/media/skype.png')"></a>
+            <a onclick="visit('https://www.npmjs.com/~shudhuiami')" class="each_nav_trigger white" style="background-image: url('resources/media/npm.png')"></a>
+            <a onclick="visit('https://github.com/shudhuiami')" class="each_nav_trigger" style="background-image: url('resources/media/github.png')"></a>
+            <a onclick="visit('https://www.facebook.com/Shudhui.amii')" class="each_nav_trigger" style="background-image: url('resources/media/facebook-o.png')"></a>
         </div>
     </div>
-    <div class="section_services_wrapper">
-        <div class="container-flat-sm grid">
-            <div class="section_services">
-                <div class="each_services_wrapper">
-                    <div class="service_cover">
-                        <div class="cover_inner"
-                             style="background-image: url('resources/media/images/service_1.jpg')"></div>
+
+    <div class="main_container">
+        <div class="inner_wrapper" id="main_wrapper">
+            <div class="eachSection section_1 _active">
+                <div class="cover_image" style="background-image: url('resources/media/covers/cover_1.jpg')"></div>
+                <div class="section_inner_content">
+                    <div class="basic_info">
+                        <div class="info info_1">
+                            <div class="heading">AHMED ZOBAYER</div>
+                            <div class="slogan">Front End Developer</div>
+                        </div>
+                        <div class="info info_2">
+                            <div class="heading">ADDRESS</div>
+                            <div class="slogan">205, East Kazipara, Mirpur, Dhaka-1216</div>
+                        </div>
+                        <div class="info info_3">
+                            <div class="heading">CONTACT</div>
+                            <div class="slogan">zobayer.me@gmail.com</div>
+                            <div class="slogan">+8801762011847</div>
+                        </div>
                     </div>
-                    <div class="desc">
-                        We consider our landowners our partners.
-                        Our local real estate professionals have
-                        extensive experience developing lease
-                    </div>
-                </div>
-                <div class="each_services_wrapper">
-                    <div class="service_cover">
-                        <div class="cover_inner"
-                             style="background-image: url('resources/media/images/service_2.jpg')"></div>
-                    </div>
-                    <div class="desc">
-                        You may be able to assist local financial
-                        loan for buying your apartment if you
-                    </div>
-                </div>
-                <div class="each_services_wrapper">
-                    <div class="service_cover">
-                        <div class="cover_inner"
-                             style="background-image: url('resources/media/images/service_3.jpg')"></div>
-                    </div>
-                    <div class="desc">
-                        For any sort of additional information or
-                        book a place to visit us plese visit enquries.
+                    <div class="cover_latter">
+                        Hi! I am Ahmed zobayer and I like to introduce myself as a Front End web developer
+                        who has a huge crash on Javascript and Node js.Experienced with most of the development
+                        platforms & dynamic web projects. Capable of working with different programming language
+                        such as JavaScript, VueJS, jQuery, PHP, PHP7, SCSS, LESS, handlebarsJS, Laravel etc.
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="margin-30"></div>
-    </div>
-    <div class="section_footer_wrapper">
-        <div class="">
-            <div class="section_footer">
-                <div class="inner_section">
-                    <div class="section_info">
-                        <div class="section_info_inner blank-left">
-                            <div class="title">VISIT US</div>
-                            <div class="info_content">Corporate office <br> <br> House # 13, Block #F, <br> Mirpur,
-                                Dhaka
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section_info align-mid">
-                        <div class="section_info_inner pull-mid">
-                            <div class="title">CALL US</div>
-                            <div class="info_content">+8801234566789</div>
-                        </div>
-                    </div>
-                    <div class="section_info align-mid">
-                        <div class="section_info_inner pull-mid">
-                            <div class="title">EMAIL US</div>
-                            <div class="info_content">info@comapny.com</div>
-                        </div>
-                    </div>
-                    <div class="section_info social_full">
-                        <div class="section_info_inner pull-right blank-right">
-                            <div class="social_follow">
-                                <a href="https://www.facebook.com/" class="action_trigger"
-                                   style="background-image: url('resources/media/icons/fb.png')"></a>
-                                <a href="https://twitter.com/" class="action_trigger"
-                                   style="background-image: url('resources/media/icons/tw.png')"></a>
-                                <a href="https://www.linkedin.com/" class="action_trigger"
-                                   style="background-image: url('resources/media/icons/in.png')"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bottom_bar">
-        <div class="container-flat-bg">
-            <div class="copy_right"><span>&#169;</span><span> COMPANY </span><span> Real Estate Ltd. 2017. All rights reserved.</span><br><span>Design by Ahmed zobayer</span>
-            </div>
+            <div class="eachSection section_2"></div>
+            <div class="eachSection section_3"></div>
+            <div class="eachSection section_4"></div>
         </div>
     </div>
 </div>
-<script src="resources/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="resources/js/skype-uri.js"></script>
 <script src="resources/js/script.js" type="text/javascript"></script>
 </body>
 </html>
