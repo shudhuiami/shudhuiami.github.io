@@ -187,7 +187,8 @@ body {
       .body_wrapper .nav_right {
         width: 300px;
         height: 40px;
-        display: block; } }
+        display: block;
+        z-index: 50; } }
     @media screen and (max-width: 650px) {
       .body_wrapper .nav_right {
         width: 100%;
