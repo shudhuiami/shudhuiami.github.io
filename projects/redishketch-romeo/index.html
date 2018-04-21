@@ -18,7 +18,7 @@
             <!--<li><a href="#"></a>Write Post</li>-->
         </ul>
     </div>
-    <form id="demo-form" class="demo-form"  onsubmit="submitform(event)">
+    <form id="demo-form" class="demo-form" onsubmit="submitform(event)">
         <div class="form_title">Demo Form</div>
         <div class="input-group">
             <input type="text" name="username" placeholder="Username . . .">
@@ -46,10 +46,8 @@
 
 <script src="resources/js/romeo.js" type="text/javascript"></script>
 <script type="application/javascript">
-</script>
-<script type="application/javascript">
     var jsonPrettyPrint = {
-        replacer: function(match, pIndent, pKey, pVal, pEnd) {
+        replacer: function (match, pIndent, pKey, pVal, pEnd) {
             var key = '<span class=json-key>';
             var val = '<span class=json-value>';
             var str = '<span class=json-string>';
@@ -60,7 +58,7 @@
                 r = r + (pVal[0] == '"' ? str : val) + pVal + '</span>';
             return r + (pEnd || '');
         },
-        toHtml: function(obj) {
+        toHtml: function (obj) {
             var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
             return JSON.stringify(obj, null, 4)
                 .replace(/&/g, '&amp;').replace(/\\"/g, '&quot;')
@@ -68,10 +66,11 @@
                 .replace(jsonLine, jsonPrettyPrint.replacer);
         }
     };
+
     function getData(event) {
         event.preventDefault();
         new resources({
-            url: "http://localhost/redishketch-romeo/testServer/get.php",
+            url: "https://hostcontroller.000webhostapp.com/romeo/get.php",
             method: "GET",
             onSuccess: function (response) {
                 var res = JSON.parse(response);
@@ -80,11 +79,12 @@
             }
         });
     }
+
     function submitform(event) {
         event.preventDefault();
         var el = event.currentTarget;
         new resources({
-            url: "http://localhost/redishketch-romeo/testServer/post.php",
+            url: "https://hostcontroller.000webhostapp.com/romeo/post.php",
             method: "POST",
             el: el,
             /*data: {
