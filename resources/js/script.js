@@ -55,3 +55,11 @@ Skype.ui({
 function visit(url) {
     window.open(url, '_blank');
 }
+
+window.addEventListener('keyup', function (event) {
+    if (event.keyCode === 38 || event.keyCode === 37){
+        prevSection();
+    }else if(event.keyCode === 40 || event.keyCode === 39){
+        nextSection();
+    }
+});
