@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zing | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./resources/css/animate.min.css">
+    <link rel="stylesheet" href="./resources/css/style.min.css?css='123'">
+    <script src="./resources/plugins/vue.min.js" type="text/javascript"></script>
+    <script src="./resources/plugins/jquery.min.js" type="text/javascript"></script>
+    <script src="./resources/plugins/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" type="text/javascript"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div class="main-body-wrapper" id="Vue_component">
+    <div class="inner-wrapper">
+        <div class="nav-wrapper">
+            <ul class="nav-inner">
+                <li class="red" @click="changeSection(1)">
+                    <div class="nav-title">PROFILE</div>
+                    <div class="active-circle animated bounceIn" :class="{'active': active_section == 1}"><div class="active-circle-inner"></div></div>
+                    <a><i class="fa fa-user"    aria-hidden="true"></i></a>
+                </li>
+                <li class="yellow" @click="changeSection(2)">
+                    <div class="nav-title">RESUME</div>
+                    <div class="active-circle animated bounceIn" :class="{'active': active_section == 2}"><div class="active-circle-inner"></div></div>
+                    <a><i class="fa fa-id-card" aria-hidden="true"></i></a>
+                </li>
+                <li class="green" @click="changeSection(3)">
+                    <div class="nav-title">SKILLS</div>
+                    <div class="active-circle animated bounceIn" :class="{'active': active_section == 3}"><div class="active-circle-inner"></div></div>
+                    <a><i class="fa fa-tasks" aria-hidden="true"></i></a>
+                </li>
+                <li class="purple" @click="changeSection(4)">
+                    <div class="nav-title">PORTFOLIO</div>
+                    <div class="active-circle animated bounceIn" :class="{'active': active_section == 4}"><div class="active-circle-inner"></div></div>
+                    <a><i class="fa fa-bandcamp" aria-hidden="true"></i></a>
+                </li>
+                <li class="blue" @click="changeSection(5)">
+                    <div class="nav-title">CONTACT</div>
+                    <div class="active-circle animated bounceIn" :class="{'active': active_section == 5}"><div class="active-circle-inner"></div></div>
+                    <a><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <div v-if="active_section == 1" class="each-section section-1">
+                <div class="section-left">
+                    <div class="avatar">
+                        <img src="./resources/images/avatar.png" alt="https://shudhuiami.github.io/resources/media/covers/cover_1.jpg">
+                    </div>
+                    <div class="user-info">
+                        <div class="username">Ahmed Zobayer</div>
+                        <div class="profession">Full Stack Web Developer</div>
+                    </div>
+                </div>
+                <div class="section-right">
+                    <div class="key-details-wrapper">
+                        <div class="each-details">
+                            <div class="key">Name: </div>
+                            <div class="details">Ahmed Zobayer</div>
+                        </div>
+                        <div class="each-details">
+                            <div class="key">Date of birth: </div>
+                            <div class="details">22 May, 1996</div>
+                        </div>
+                        <div class="each-details">
+                            <div class="key">Address: </div>
+                            <div class="details">San Francisco, CA 94102, US</div>
+                        </div>
+                        <div class="each-details">
+                            <div class="key">Phone: </div>
+                            <div class="details">+8801762011847</div>
+                        </div>
+                        <div class="each-details">
+                            <div class="key">Email: </div>
+                            <div class="details">Zobayer.me@gmail.com</div>
+                        </div>
+                        <div class="each-details">
+                            <div class="key">Website: </div>
+                            <div class="details"><a href="#">https://info.github.io</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                </div>
+            </div>
+            <div v-if="active_section == 2" class="each-section section-2">
+                <div class="each-sector">
+                    <div class="header" data-toggle="collapse" data-target="#employment">
+                        <div class="header-icon"><i class="fa fa-university" aria-hidden="true"></i></div>
+                        <div class="header-title">Employment</div>
+                    </div>
+                    <div id="employment" class="collapse show">
+                        <div class="each-item">
+                            <div class="section-left">
+                                <div class="institution-name">
+                                    <span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>&nbsp;
+                                    <span>Tiger IT Bangladesh</span>
+                                </div>
+                                <div class="institution-position">Programmer</div>
+                            </div>
+                            <div class="section-right">
+                                <div class="date">2003 - 2007</div>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                        <div class="each-item">
+                            <div class="section-left">
+                                <div class="institution-name">
+                                    <span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>&nbsp;
+                                    <span>Magnito Digital</span>
+                                </div>
+                                <div class="institution-position">Programmer</div>
+                            </div>
+                            <div class="section-right">
+                                <div class="date">2003 - 2007</div>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                        <div class="each-item">
+                            <div class="section-left">
+                                <div class="institution-name">
+                                    <span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>&nbsp;
+                                    <span>Southtech Limited</span>
+                                </div>
+                                <div class="institution-position">Programmer</div>
+                            </div>
+                            <div class="section-right">
+                                <div class="date">2003 - 2007</div>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="each-sector">
+                    <div class="header" data-toggle="collapse" data-target="#education">
+                        <div class="header-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+                        <div class="header-title">Education</div>
+                    </div>
+                    <div id="education" class="collapse">
+                        <div class="each-item">
+                            <div class="section-left">
+                                <div class="institution-name">
+                                    <span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>&nbsp;
+                                    <span>Dhaka University</span>
+                                </div>
+                                <div class="institution-position">Master of Science (M.Sc.) DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</div>
+                            </div>
+                            <div class="section-right">
+                                <div class="date">2003 - 2007</div>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                        <div class="each-item">
+                            <div class="section-left">
+                                <div class="institution-name">
+                                    <span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>&nbsp;
+                                    <span>Rajshahi University</span>
+                                </div>
+                                <div class="institution-position">Bachelors of Science (M.Sc.) DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</div>
+                            </div>
+                            <div class="section-right">
+                                <div class="date">2003 - 2007</div>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                        <div class="each-item">
+                            <div class="section-left">
+                                <div class="institution-name">
+                                    <span><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></span>&nbsp;
+                                    <span>Dhaka College</span>
+                                </div>
+                                <div class="institution-position">Higher Secondary School Certificate</div>
+                            </div>
+                            <div class="section-right">
+                                <div class="date">2003 - 2007</div>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="each-sector">
+                    <div class="header" data-toggle="collapse" data-target="#languages">
+                        <div class="header-icon"><i class="fa fa-language" aria-hidden="true"></i></div>
+                        <div class="header-title">Languages</div>
+                    </div>
+                    <div id="languages" class="collapse">
+                        <div class="each-wide-row">
+                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>&nbsp;
+                            <span>English</span>
+                        </div>
+                        <div class="each-wide-row">
+                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>&nbsp;
+                            <span>Arabic</span>
+                        </div>
+                        <div class="each-wide-row">
+                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>&nbsp;
+                            <span>Bangla</span>
+                        </div>
+                        <div class="each-wide-row">
+                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>&nbsp;
+                            <span>french</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div v-if="active_section == 3" class="each-section section-3">
+                <div class="each-skill">
+                    <div class="name">HTML5</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-color html" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" style="width: 96%"></div>
+                        </div>
+                    </div>
+                    <div class="count">96%</div>
+                </div>
+                <div class="each-skill">
+                    <div class="name">CSS3</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-color css" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="count">90%</div>
+                </div>
+                <div class="each-skill">
+                    <div class="name">JavaScript</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-color javascript" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="count">85%</div>
+                </div>
+                <div class="each-skill">
+                    <div class="name">VueJS</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-color vueJs" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="count">100%</div>
+                </div>
+                <div class="each-skill">
+                    <div class="name">PHP</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-color php" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="count">92%</div>
+                </div>
+                 <div class="each-skill">
+                    <div class="name">Laravel</div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated skill-color laravel" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    <div class="count">98%</div>
+                </div>
+
+            </div>
+            <div v-if="active_section == 4" class="each-section section-4">
+
+                <div class="nav-bars">
+                    <ul>
+                        <li><a data-filter="all">All</a></li>
+                        <li><a data-filter=".web">Web Development</a></li>
+                        <li><a data-filter=".graphics">Graphics</a></li>
+                        <li><a data-filter=".software">Software</a></li>
+                        <li><a data-filter=".plugins">Plugins</a></li>
+                    </ul>
+                </div>
+                 <div class="items-container">
+                     <div class="each-item mix web">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix graphics">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix software">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix plugins">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix web">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix graphics">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix software">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix plugins">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix web">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix graphics">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix software">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                     <div class="each-item mix plugins">
+                         <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
+                         <div class="title">Abstract</div>
+                     </div>
+                 </div>
+
+
+            </div>
+            <div v-if="active_section == 5" class="each-section section-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="each-sector">
+                            <div class="header">
+                                <div class="header-icon"><i class="fa fa-map" aria-hidden="true"></i></div>
+                                <div class="header-title">Street Address</div>
+                            </div>
+                            <div class="content">
+
+                                <address>
+                                    <span><i class="fa fa-user"></i></span>
+                                    <strong>Ahmed Zobayer</strong><br>
+                                    <a href="mailto:#">info@example.com</a>
+                                </address>
+
+
+                                <address>
+                                    <span><i class="fa fa-map-marker"></i></span>
+                                    <strong>Redishketch, Inc.</strong><br>
+                                    1355 Market Street, Suite 900<br>
+                                    San Francisco, CA 94103<br>
+                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                </address>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="each-sector">
+                            <div class="header">
+                                <div class="header-icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                <div class="header-title">Send Email</div>
+                            </div>
+                            <div class="content">
+                                <form onsubmit="event.preventDefault();">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="" id="" cols="10" rows="5" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group text-right">
+                                        <button class="btn theme-btn">Send Mail</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./resources/js/bg.js" type="text/javascript"></script>
+<script>
+    new Vue({
+        el: '#Vue_component',
+        data: {
+            active_section: 1
+        },
+        methods: {
+            changeSection(section){
+                this.active_section = section;
+            }
+        },
+        watch: {
+            active_section(newValue, oldValue){
+                if(newValue === 4){
+                    setTimeout(function () {
+                        let mixer = mixitup('.items-container');
+                    },200);
+
+                }
+            }
+        },
+        created() {
+        },
+        mounted() {
+            let mixer = mixitup('.items-container');
+        }
+    });
+</script>
+
+</body>
+</html>
