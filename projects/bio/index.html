@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Zing | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/plugins/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./resources/css/animate.min.css">
@@ -24,7 +24,7 @@
                 <li class="red" @click="changeSection(1)">
                     <div class="nav-title">PROFILE</div>
                     <div class="active-circle animated bounceIn" :class="{'active': active_section == 1}"><div class="active-circle-inner"></div></div>
-                    <a><i class="fa fa-user"    aria-hidden="true"></i></a>
+                    <a><i class="fa fa-user" aria-hidden="true"></i></a>
                 </li>
                 <li class="yellow" @click="changeSection(2)">
                     <div class="nav-title">RESUME</div>
@@ -93,6 +93,7 @@
                 </div>
             </div>
             <div v-if="active_section == 2" class="each-section section-2">
+                <div class="section-title">RESUME</div>
                 <div class="each-sector">
                     <div class="header" data-toggle="collapse" data-target="#employment">
                         <div class="header-icon"><i class="fa fa-university" aria-hidden="true"></i></div>
@@ -250,6 +251,7 @@
                 </div>
             </div>
             <div v-if="active_section == 3" class="each-section section-3">
+                <div class="section-title">SKILLS</div>
                 <div class="each-skill">
                     <div class="name">HTML5</div>
                     <div class="progress-bar-wrapper">
@@ -307,7 +309,7 @@
 
             </div>
             <div v-if="active_section == 4" class="each-section section-4">
-
+                <div class="section-title">PORTFOLIO</div>
                 <div class="nav-bars">
                     <ul>
                         <li><a data-filter="all">All</a></li>
@@ -317,7 +319,7 @@
                         <li><a data-filter=".plugins">Plugins</a></li>
                     </ul>
                 </div>
-                 <div class="items-container">
+                <div class="items-container">
                      <div class="each-item mix web">
                          <img src="./resources/images/portfolio/2.jpg" alt="" class="cover">
                          <div class="title">Abstract</div>
@@ -367,10 +369,9 @@
                          <div class="title">Abstract</div>
                      </div>
                  </div>
-
-
             </div>
             <div v-if="active_section == 5" class="each-section section-5">
+                <div class="section-title">CONTACT</div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="each-sector">
